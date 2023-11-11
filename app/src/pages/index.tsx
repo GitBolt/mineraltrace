@@ -68,48 +68,71 @@ export default function Home() {
 
       <Navbar />
       <CreateUserModal isOpen={isOpen} onClose={onClose} />
-      <Flex flexFlow="column" gap="1rem" justify="center" bg="#232735" align="center" minH="92.5vh" h="100%" p="0 10rem">
+      <Flex flexFlow="column" gap="1rem" bg="#101114" align="center" minH="92.5vh" h="100%" p="0 10rem">
 
-        <Text fontSize="70px" color="white" fontWeight={800}>Join or Create a Chat Room!</Text>
+        <Flex justify="center" align="center" marginTop="2rem">
+          <Box>
+            <Text fontSize="45px" color="white" fontWeight={800}>Transforming Minerals with Blockchain Transparency and AI Integrity</Text>
+            <Text fontSize="30px" color="gray.400" fontWeight={500}>Basic prototype working demo on using blockchain to power the mineral supply chain for transparency</Text>
+
+          </Box>
+          <img src="/hero.png" />
+        </Flex>
+
+        <Button colorScheme="green" height="60px" width="300px" fontSize="30px" borderRadius="10px">Try Now</Button>
+
+        <Text fontSize="50px" color="white" fontWeight={800} marginTop="70px">Why On Blockchain?</Text>
+
+        <Flex flexFlow="row" flexWrap="wrap" w="70vw" align="center" justify="center" gap="50px" mt="50px" mb="100px">
+
+          <Flex flexFlow="column" align="start" justify="center" w="520px">
+
+            <Flex w="100%" gap="1rem">
+              <img src="/globe.png" />
+              <Text fontSize="30px" color="white" fontWeight={600}>Global Accessibility</Text>
+            </Flex>
+            <Text fontSize="20px" color="#DCF2FF" fontWeight={400} maxWidth="80%">Blockchain offers worldwide accessibility for easy data verification and information sharing</Text>
+
+          </Flex>
 
 
-        {chatRooms && chatRooms.length ?
-          <VStack spacing={0} align="stretch">
-            {chatRooms.map((chat: any, index: number) => {
 
-              <Divider />
-              const chatMessages = JSON.parse(chat.chats);
+          <Flex flexFlow="column" align="start" justify="center" w="520px">
 
-              if (chatMessages.length == 0) {
-                return (
-                  <HStack key={chat.id} justify="space-between" border="1px solid" borderColor="#2e2c3a" w="50rem" h="6rem" padding="5px 10px" rounded="5px">
-                    <Text fontSize="2rem" color="white">Nothing here yet...</Text>
-                    <Button size="sm" fontSize="1.2rem" padding="1.3rem 1rem" colorScheme="telegram">Be The First One to Message</Button>
-                  </HStack>
-                );
-              }
-              const lastMessage = chatMessages[chatMessages.length - 1];
-              const date = new Date(lastMessage.date);
-              return (
-                <HStack _hover={{bg:"#364059"}} key={chat.id} justify="space-between" border="1px solid" borderColor="#2e2c3a" w="50rem" h="6rem" padding="5px 10px" rounded="5px">
-                  <Avatar size="md" src={`avatar-url-here`} />
-                  <Box flex="1">
-                    <Text fontSize="1.4rem" color="gray.200" fontWeight="bold">{lastMessage.username}</Text>
-                    <Text fontSize="1.2rem" color="gray.500">{lastMessage.message}</Text>
-                  </Box>
-                  <Text fontSize="1.2rem" color="gray.400">{date.toLocaleString()}</Text>
-                  <Button size="sm" fontSize="1.2rem" padding="1.3rem 1.5rem" colorScheme="telegram" onClick={() => handleView(chat.id)}>Open</Button>
-                </HStack>
-              );
-            })}
+            <Flex w="100%" gap="1rem">
+              <img src="/dec.png" />
+              <Text fontSize="30px" color="white" fontWeight={600}>Decentralization</Text>
+            </Flex>
+            <Text fontSize="20px" color="#DCF2FF" fontWeight={400} maxWidth="80%">Blockchain eliminates the need for a single certifying body, reducing fraud risk.</Text>
 
-            <Button colorScheme="green" w="50%" marginTop="1.2rem !important" h="3rem" fontSize="1.2rem" alignSelf="center" onClick={handleCreateRoom}>Create Room</Button>
-          </VStack>
-          : <VStack>
-            <Text fontSize="1.3rem" color="gray.200">No Chat Rooms</Text>
-            <Button colorScheme="green" w="100%" marginTop="1.2rem !important" h="3rem" fontSize="1.2rem" alignSelf="center" onClick={handleCreateRoom}>Create Your Own</Button>
+          </Flex>
 
-          </VStack>}
+
+
+          <Flex flexFlow="column" align="start" justify="center" w="520px">
+
+            <Flex w="100%" gap="1rem">
+              <img src="/transparent.png" />
+              <Text fontSize="30px" color="white" fontWeight={600}>Transparency</Text>
+            </Flex>
+            <Text fontSize="20px" color="#DCF2FF" fontWeight={400} maxWidth="80%">Enabling transparent verification and authenticity of actions and verification certificates (NFTS)</Text>
+
+          </Flex>
+
+
+
+
+          <Flex flexFlow="column" align="start" justify="center" w="520px">
+
+            <Flex w="100%" gap="1rem">
+              <img src="/audit.png" />
+              <Text fontSize="30px" color="white" fontWeight={600}>Audit Trail</Text>
+            </Flex>
+            <Text fontSize="20px" color="#DCF2FF" fontWeight={400} maxWidth="80%">Blockchain creates a reliable audit trail for easy tracking and verification of entire supply chain</Text>
+
+          </Flex>
+
+        </Flex>
       </Flex>
 
 
