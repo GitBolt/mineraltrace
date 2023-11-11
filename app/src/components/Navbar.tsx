@@ -12,8 +12,8 @@ export const Navbar = () => {
       </Link>
 
       <Flex justify="center" align="center" gap="10px">
-        <Text color="gray.200" fontSize="20px" fontWeight={600}>Project Built Under</Text>
-        <img style={{filter:"brightness(1000%)"}} src="nyas.png" width="150px" />
+        <Text color="gray.200" fontSize="1.4rem" fontWeight={600}>Project Built Under</Text>
+        <img style={{filter:"brightness(1000%)"}} src="nyas.png" width="100rem" />
       </Flex>
       {/* <Wallets /> */}
     </Flex>

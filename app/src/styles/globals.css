@@ -29,3 +29,38 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@media screen and (max-width: 1200px) {
+  html, body {
+    font-size: 90% !important;
+  }
+
+  .heroImg {
+    width:400px !important;
+    height:300px !important;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  html, body {
+    font-size: 70% !important;
+  }
+
+  .heroImg {
+    width:250px !important;
+    height:150px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html, body {
+    font-size: 50% !important;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  html, body {
+    font-size: 40% !important;
+  }
+}

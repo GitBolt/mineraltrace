@@ -72,24 +72,23 @@ export default function Home() {
 
         <Flex justify="center" align="center" marginTop="2rem">
           <Box>
-            <Text fontSize="45px" color="white" fontWeight={800}>Transforming Minerals with Blockchain Transparency and AI Integrity</Text>
-            <Text fontSize="30px" color="gray.400" fontWeight={500}>Basic prototype working demo on using blockchain to power the mineral supply chain for transparency</Text>
+            <Text fontSize="3.5rem" color="white" fontWeight={800}>Transforming Minerals with Blockchain Transparency and AI Integrity</Text>
+            <Text fontSize="1.8rem" color="gray.400" fontWeight={500}>Basic prototype working demo on using blockchain to power the mineral supply chain for transparency</Text>
 
           </Box>
-          <img src="/hero.png" />
+          <img className="heroImg" src="/hero.png" style={{width:"600px", height:"450px"}} />
         </Flex>
 
-        <Button colorScheme="green" height="60px" width="300px" fontSize="30px" borderRadius="10px">Try Now</Button>
+        <Button colorScheme="green" height="70px" width="30rem" fontSize="3rem" borderRadius="10px">Try Now</Button>
 
         <Text fontSize="50px" color="white" fontWeight={800} marginTop="70px">Why On Blockchain?</Text>
 
         <Flex flexFlow="row" flexWrap="wrap" w="70vw" align="center" justify="center" gap="50px" mt="50px" mb="100px">
 
           <Flex flexFlow="column" align="start" justify="center" w="520px">
-
-            <Flex w="100%" gap="1rem">
-              <img src="/globe.png" />
-              <Text fontSize="30px" color="white" fontWeight={600}>Global Accessibility</Text>
+            <Flex w="100%" gap="1rem" align="center">
+              <img src="/globe.png" style={{width:"70px", height:"70px"}} />
+              <Text fontSize="30px" color="white" fontWeight={600}>Global Access</Text>
             </Flex>
             <Text fontSize="20px" color="#DCF2FF" fontWeight={400} maxWidth="80%">Blockchain offers worldwide accessibility for easy data verification and information sharing</Text>
 
@@ -98,7 +97,6 @@ export default function Home() {
 
 
           <Flex flexFlow="column" align="start" justify="center" w="520px">
-
             <Flex w="100%" gap="1rem">
               <img src="/dec.png" />
               <Text fontSize="30px" color="white" fontWeight={600}>Decentralization</Text>
