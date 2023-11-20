@@ -72,14 +72,14 @@ export default function Home() {
 
         <Flex justify="center" align="center" marginTop="2rem">
           <Box>
-            <Text fontSize="3.5rem" color="white" fontWeight={800}>Transforming Minerals with Blockchain Transparency and AI Integrity</Text>
+            <Text fontSize="3.5rem" color="white" fontWeight={800}>Transforming Mineral Supply Chain with Blockchain Transparency and AI Integrity</Text>
             <Text fontSize="1.8rem" color="gray.400" fontWeight={500}>Basic prototype working demo on using blockchain to power the mineral supply chain for transparency</Text>
 
           </Box>
           <img className="heroImg" src="/hero.png" style={{width:"600px", height:"450px"}} />
         </Flex>
 
-        <Button colorScheme="green" height="70px" width="30rem" fontSize="3rem" borderRadius="10px">Try Now</Button>
+        <Button colorScheme="green" height="70px" width="30rem" fontSize="3rem" borderRadius="10px">Under Progress</Button>
 
         <Text fontSize="50px" color="white" fontWeight={800} marginTop="70px">Why On Blockchain?</Text>
 
